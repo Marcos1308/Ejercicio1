@@ -1,0 +1,3 @@
+Vamos a crear una carpeta con un archivo txt, dentro poner el texto que queramos, esta
+carpeta junto con el txt tienen que iniciarse como un repositorio local. Además
+deberemos subir este archivo a un repositorio remoto.
