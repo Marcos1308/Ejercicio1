@@ -15,12 +15,21 @@ public class Mascota {
     private String id;
     private String apodo;
     private String raza;
+    private String edad;
     @ManyToOne /* La relacion si fue declarada onetomany en la otra, y quiero trabajarla de forma BI DIRECCIONAL
                 La declaro aca manytone*/
     @JoinColumn(name = "duenio_id") // El JoinColumn, hace referencia a como llamar esa columna donde guardo a mi Usuario
     private Usuario duenio;
 
     public Mascota() {
+    }
+
+    public Mascota(String id, String apodo, String raza, String edad, Usuario duenio) {
+        this.id = id;
+        this.apodo = apodo;
+        this.raza = raza;
+        this.edad = edad;
+        this.duenio = duenio;
     }
 
     public String getId() {
@@ -47,6 +56,14 @@ public class Mascota {
         this.raza = raza;
     }
 
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
     public Usuario getDuenio() {
         return duenio;
     }
@@ -55,10 +72,11 @@ public class Mascota {
         this.duenio = duenio;
     }
 
-    
     @Override
     public String toString() {
-        return "Mascota{" + "id=" + id + ", apodo=" + apodo + ", raza=" + raza + '}';
+        return "Mascota{" + "id=" + id + ", apodo=" + apodo + ", raza=" + raza + ", edad=" + edad + ", duenio=" + duenio + '}';
     }
+
+   
 
 }
